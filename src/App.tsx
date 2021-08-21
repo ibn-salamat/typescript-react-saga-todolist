@@ -1,9 +1,6 @@
 import { useEffect } from "react";
-import { Title, TodoList } from "./components";
+import { TodoList } from "./components";
 import { store } from "./store";
-
-
-
 
 export const App = () => {
   useEffect(() => {
@@ -11,8 +8,7 @@ export const App = () => {
   }, []);
   return (
     <>
-      <Title label="TodoList" />
-      <TodoList />
+      <TodoList title="Todolist 1" />
     </>
   );
 };

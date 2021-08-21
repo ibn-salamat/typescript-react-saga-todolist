@@ -1,6 +1,19 @@
 import React from "react";
+import { Title, TodoListInput } from "../../components";
+
 import "./index.css";
 
-export const TodoList = () => {
-  return <div className="todolist-container"></div>;
+type TododListProps = {
+  title: string;
+};
+
+export const TodoList = (props: TododListProps) => {
+  const { title } = props;
+  return (
+    <div className="todolist-container">
+      <Title label={title} />
+
+      <TodoListInput />
+    </div>
+  );
 };
