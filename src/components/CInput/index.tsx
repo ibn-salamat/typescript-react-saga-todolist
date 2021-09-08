@@ -1,19 +1,19 @@
 import React, { ChangeEvent, ChangeEventHandler } from "react";
 
-type HandleChange = (value: string, event?: ChangeEvent) => void;
+type OnChange = (value: string, event?: ChangeEvent) => void;
 
 type CInputProps = {
-  handleChange?: HandleChange;
+  onChange?: OnChange;
 };
 
 export const CInput = (props: CInputProps) => {
-  const { handleChange: propHandleChange } = props;
+  const { onChange: propOnChange } = props;
 
   const handleChange: ChangeEventHandler = (
     e: ChangeEvent<HTMLInputElement>
   ) => {
-    if (propHandleChange) {
-      propHandleChange(e.target.value, e);
+    if (propOnChange) {
+      propOnChange(e.target.value, e);
     } else {
       // something else
     }

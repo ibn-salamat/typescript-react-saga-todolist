@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Title, CInput } from "../../components";
+import { Title, CInput, CButton } from "../../components";
 
 import "./index.css";
 
@@ -12,20 +12,25 @@ export const TodoList = (props: TododListProps) => {
   const { title, isVisibleSearchInput = true } = props;
   const [textTodo, setTextTodo] = useState("");
 
-  console.log(textTodo);
-
   console.log("isVisible", isVisibleSearchInput);
+
   return (
     <div className="todolist-container">
       <Title label={title} />
 
       <CInput
-        handleChange={(value) => {
+        onChange={(value) => {
           setTextTodo(value);
         }}
       />
 
-      <button>Create</button>
+      <CButton
+        onClick={(e) => {
+          console.log(textTodo);
+        }}
+      >
+        Create
+      </CButton>
 
       <hr />
     </div>
