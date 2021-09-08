@@ -1,5 +1,5 @@
 import { Title } from "./Title/index";
 import { TodoList } from "./TodoList";
-import { TodoListInput } from "./TodoListInput";
+import { CInput } from "./CInput";
 
-export { TodoList, Title, TodoListInput };
+export { TodoList, Title, CInput };
