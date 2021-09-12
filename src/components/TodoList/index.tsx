@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+
 import { Title, CInput, CButton } from "../../components";
+import { addTodo } from "../../store/actions";
 
 import "./index.css";
 
@@ -9,10 +12,13 @@ type TododListProps = {
 };
 
 export const TodoList = (props: TododListProps) => {
-  const { title, isVisibleSearchInput = true } = props;
+  const dispatch = useDispatch();
+  const _addTodo = (title: string) => addTodo(title);
+
+  const { title } = props;
   const [textTodo, setTextTodo] = useState("");
 
-  console.log("isVisible", isVisibleSearchInput);
+  // console.log("isVisible", isVisibleSearchInput);
 
   return (
     <div className="todolist-container">
@@ -25,8 +31,8 @@ export const TodoList = (props: TododListProps) => {
       />
 
       <CButton
-        onClick={(e) => {
-          console.log(textTodo);
+        onClick={() => {
+          _addTodo(textTodo);
         }}
       >
         Create
