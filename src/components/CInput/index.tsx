@@ -4,10 +4,11 @@ type OnChange = (value: string, event?: ChangeEvent) => void;
 
 type CInputProps = {
   onChange?: OnChange;
+  value?: string;
 };
 
 export const CInput = (props: CInputProps) => {
-  const { onChange: propOnChange } = props;
+  const { onChange: propOnChange, value } = props;
 
   const handleChange: ChangeEventHandler = (
     e: ChangeEvent<HTMLInputElement>
@@ -21,7 +22,7 @@ export const CInput = (props: CInputProps) => {
 
   return (
     <div className="">
-      <input placeholder="Title" onChange={handleChange} />
+      <input value={value} placeholder="Title" onChange={handleChange} />
     </div>
   );
 };
