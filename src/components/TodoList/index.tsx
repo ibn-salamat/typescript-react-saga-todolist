@@ -19,8 +19,6 @@ const _TodoList = (props: TododListProps) => {
   const { title, addTodo, todos } = props;
   const [textTodo, setTextTodo] = useState("");
 
-  // console.log("isVisible", isVisibleSearchInput);
-
   return (
     <div className="todolist-container">
       <Title label={title} />
