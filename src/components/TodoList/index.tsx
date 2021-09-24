@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 
 import { Title, CInput, CButton } from "../../components";
 import { addTodoAction } from "../../store/actions";
+import { TodoType } from "../../store/reducers/todolist";
 
 import "./index.css";
 
@@ -11,10 +12,11 @@ type TododListProps = {
   title: string;
   isVisibleSearchInput?: boolean;
   addTodo: (title: string) => Action;
+  todos: TodoType[];
 };
 
 const _TodoList = (props: TododListProps) => {
-  const { title, addTodo } = props;
+  const { title, addTodo, todos } = props;
   const [textTodo, setTextTodo] = useState("");
 
   // console.log("isVisible", isVisibleSearchInput);
@@ -40,6 +42,17 @@ const _TodoList = (props: TododListProps) => {
         Create
       </CButton>
 
+      {todos.map(({ title, id, createdDate, done }) => {
+        return (
+          <div key={id} className="todo-container">
+            <p>
+              {title} | {createdDate.toISOString()}
+            </p>
+            isDone: {done}
+          </div>
+        );
+      })}
+
       <hr />
     </div>
   );
@@ -51,4 +64,11 @@ function mapDispatchToProps(dispatch: Dispatch) {
   };
 }
 
-export const TodoList = connect(null, mapDispatchToProps)(_TodoList);
+function mapStateToProps(state: any) {
+  const {
+    todolist: { todos },
+  } = state;
+  return { todos };
+}
+
+export const TodoList = connect(mapStateToProps, mapDispatchToProps)(_TodoList);

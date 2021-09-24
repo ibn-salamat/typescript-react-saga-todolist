@@ -1,4 +1,4 @@
-import { TodosEnum } from "./saga/todo";
+import { TodosActionsEnum } from "./saga/todo";
 
 // export type BaseAction = {
 //   type: string;
@@ -6,6 +6,6 @@ import { TodosEnum } from "./saga/todo";
 // };
 
 export const addTodoAction = (title: string) => ({
-  type: TodosEnum.ADD,
+  type: TodosActionsEnum.ADD,
   payload: title,
 });
