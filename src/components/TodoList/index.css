@@ -1,0 +1,10 @@
+.todolist-container {
+  padding: 10px;
+  border: 1px solid red;
+}
+
+.todo-container {
+  border: 1px solid green;
+  padding: 5px 15px;
+  margin: 5px 0;
+}
