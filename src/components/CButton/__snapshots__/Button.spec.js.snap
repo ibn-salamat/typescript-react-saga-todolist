@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render component 1`] = `
+<div
+  className="btn"
+>
+  <button
+    disabled={false}
+    onClick={[Function]}
+    placeholder="Title"
+  />
+</div>
+`;

@@ -20,7 +20,7 @@ export const CButton = (props: CButtonProps) => {
   };
 
   return (
-    <div className="">
+    <div className="btn">
       <button disabled={disabled} placeholder="Title" onClick={handleClick}>
         {children}
       </button>
