@@ -21,7 +21,7 @@ export const CButton = (props: CButtonProps) => {
 
   return (
     <div className="btn">
-      <button disabled={disabled} placeholder="Title" onClick={handleClick}>
+      <button disabled={disabled} onClick={handleClick}>
         {children}
       </button>
     </div>
