@@ -22,4 +22,13 @@ describe("Button", () => {
     component.find("input").simulate("change", event);
     expect(mockCallback.mock.calls.length).toBe(1);
   });
+
+  it("should render props value", () => {
+    const value = "text";
+    const componentWithValue = setUp({ value });
+
+    expect(componentWithValue.props().children.props.value).toBe(value);
+
+    expect(componentWithValue.find("input").prop("value")).toBe(value);
+  });
 });

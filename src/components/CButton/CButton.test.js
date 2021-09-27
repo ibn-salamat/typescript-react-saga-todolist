@@ -20,4 +20,11 @@ describe("Button", () => {
 
     expect(mockCallback.mock.calls.length).toBe(2);
   });
+
+  it("should render children", () => {
+    const children = "children text";
+    const component = setUp({ children });
+
+    expect(component.find("button").text()).toBe(children);
+  });
 });
