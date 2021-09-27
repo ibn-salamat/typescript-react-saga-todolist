@@ -1,4 +1,4 @@
-import { shallow, render, mount } from "enzyme";
+import { shallow } from "enzyme";
 import { CButton } from "./index";
 
 const setUp = (props) => shallow(<CButton {...props} />);

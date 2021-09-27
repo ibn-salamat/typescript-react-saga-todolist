@@ -3,6 +3,7 @@ import { Title } from ".";
 
 const setup = (props) => shallow(<Title {...props} />);
 
+
 describe("Title", () => {
   it("should render component", () => {
     const component = setup();
