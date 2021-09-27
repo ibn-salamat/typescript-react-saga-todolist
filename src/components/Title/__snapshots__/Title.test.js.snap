@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title should render component 1`] = `
+<p
+  style={
+    Object {
+      "fontSize": 24,
+    }
+  }
+/>
+`;

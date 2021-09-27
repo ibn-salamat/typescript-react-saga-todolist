@@ -3,7 +3,7 @@ import { CInput } from "./index";
 
 const setUp = (props) => shallow(<CInput {...props} />);
 
-describe("Button", () => {
+describe("Input", () => {
   it("should render component", () => {
     const component = setUp();
     expect(component).toMatchSnapshot();

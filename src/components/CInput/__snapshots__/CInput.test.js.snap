@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button should render component 1`] = `
+exports[`Input should render component 1`] = `
 <div
   className="c-input"
 >
