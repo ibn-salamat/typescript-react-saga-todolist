@@ -20,7 +20,7 @@ export const CButton = (props: CButtonProps) => {
   };
 
   return (
-    <div className="btn">
+    <div className="c-btn">
       <button disabled={disabled} onClick={handleClick}>
         {children}
       </button>

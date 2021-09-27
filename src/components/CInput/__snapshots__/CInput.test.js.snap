@@ -2,11 +2,11 @@
 
 exports[`Button should render component 1`] = `
 <div
-  className="btn"
+  className="c-input"
 >
-  <button
-    disabled={false}
-    onClick={[Function]}
+  <input
+    onChange={[Function]}
+    placeholder="Title"
   />
 </div>
 `;

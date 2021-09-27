@@ -21,7 +21,7 @@ export const CInput = (props: CInputProps) => {
   };
 
   return (
-    <div className="">
+    <div className="c-input">
       <input value={value} placeholder="Title" onChange={handleChange} />
     </div>
   );
