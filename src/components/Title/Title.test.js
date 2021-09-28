@@ -10,7 +10,7 @@ describe("Title", () => {
     expect(component).toMatchSnapshot();
   });
 
-  it("it should contain label", () => {
+  it("should contain label", () => {
     const label = "My Title";
     const component = setup({ label });
 
