@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoList should render component 1`] = `
+<div
+  className="todolist-container"
+>
+  <Title />
+  <CInput
+    onChange={[Function]}
+    value=""
+  />
+  <CButton
+    disabled={true}
+    onClick={[Function]}
+  >
+    Create
+  </CButton>
+  <hr />
+</div>
+`;
+
+exports[`TodoList should render todolist 1`] = `
+<div
+  className="todolist-container"
+>
+  <Title />
+  <CInput
+    onChange={[Function]}
+    value=""
+  />
+  <CButton
+    disabled={true}
+    onClick={[Function]}
+  >
+    Create
+  </CButton>
+  <div
+    className="todo-container"
+    key="1"
+  >
+    <p>
+      todo1
+       | 
+      2021-09-28T11:54:37.621Z
+    </p>
+    isDone: 
+  </div>
+  <hr />
+</div>
+`;

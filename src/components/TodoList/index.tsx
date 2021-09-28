@@ -15,7 +15,7 @@ type TododListProps = {
   todos: TodoType[];
 };
 
-const _TodoList = (props: TododListProps) => {
+export const _TodoList = (props: TododListProps) => {
   const { title, addTodo, todos } = props;
   const [textTodo, setTextTodo] = useState("");
 
@@ -40,7 +40,7 @@ const _TodoList = (props: TododListProps) => {
         Create
       </CButton>
 
-      {todos.map(({ title, id, createdDate, done }) => {
+      {todos?.map(({ title, id, createdDate, done }) => {
         return (
           <div key={id} className="todo-container">
             <p>
